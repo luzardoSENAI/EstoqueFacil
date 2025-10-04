@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EstoqueFácil - Gestão de Estoque para Food Trucks</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Swiper.js for Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="fav.png">
     <style>
         /* Estilo customizado para a fonte Inter */
         body {
             font-family: 'Inter', sans-serif;
         }
+
         /* Efeito de gradiente sutil no herói */
         .hero-gradient {
-            background: linear-gradient(180deg, rgba(243, 244, 246, 0.7) 0%, #FFFFFF 100%);
+            background: linear-gradient(180deg, rgba(214, 147, 2, 0.7) 0%, #FFFFFF 100%);
+        }
+
+        /* Customização dos botões de navegação do Swiper */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+
+<body class="bg-gray-100 text-gray-800">
 
     <!-- ===== Barra de Navegação ===== -->
     <header class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-900">
-                🚛 Estoque<span class="text-orange-500">Fácil</span>
+            <a href="#" class="flex items-center gap-2 text-2xl font-bold text-gray-900">
+                <img src="fav.png" alt="Logo caminhão" class="w-8 h-8">
+                Estoque<span class="text-orange-500">Fácil</span>
             </a>
+
             <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#funcionalidades" class="text-gray-600 hover:text-orange-500 transition-colors">Funcionalidades</a>
+                <a href="#funcionalidades"
+                    class="text-gray-600 hover:text-orange-500 transition-colors">Funcionalidades</a>
                 <a href="#depoimentos" class="text-gray-600 hover:text-orange-500 transition-colors">Depoimentos</a>
                 <a href="#precos" class="text-gray-600 hover:text-orange-500 transition-colors">Preços</a>
             </nav>
-            <a href="#cta" class="bg-orange-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-600 transition-transform hover:scale-105 shadow-sm">
-                Começar Teste Grátis
+            <a href="#cta"
+                class="bg-orange-500 text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-600 transition-transform hover:scale-105 shadow-sm">
+                Login
             </a>
         </div>
     </header>
@@ -55,91 +83,125 @@
                         A gestão de estoque que seu food truck merece.
                     </h1>
                     <p class="text-lg md:text-xl text-gray-600 mb-10">
-                        Concentre-se na comida. Deixe que o EstoqueFácil evite desperdícios e garanta que você nunca fique sem ingredientes.
+                        Concentre-se na comida. Deixe que o EstoqueFácil evite desperdícios e garanta que você nunca
+                        fique sem ingredientes.
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <a href="#cta" class="w-full sm:w-auto bg-orange-500 text-white font-bold px-8 py-4 rounded-lg hover:bg-orange-600 transition-transform hover:scale-105 shadow-lg text-lg">
-                            Iniciar Teste Gratuito de 14 Dias
-                        </a>
-                        <a href="#funcionalidades" class="w-full sm:w-auto bg-white text-gray-700 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors border border-gray-300 shadow-lg text-lg">
-                            Veja como Funciona
-                        </a>
-                    </div>
+
                 </div>
-                <!-- Imagem em destaque -->
+                <!-- Carrossel de Imagens -->
                 <div class="mt-16 md:mt-20 max-w-5xl mx-auto">
-                    <div class="bg-white p-4 rounded-2xl shadow-2xl border border-gray-200">
-                         <img src="https://placehold.co/1200x600/f97316/ffffff?text=Interface+do+EstoqueF%C3%A1cil" 
-                              alt="Interface do sistema EstoqueFácil sendo exibida em um tablet" 
-                              class="rounded-xl w-full h-auto">
+                    <div
+                        class="swiper-container rounded-2xl shadow-2xl border border-gray-200 overflow-hidden bg-gray-200">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <img src="1.png" alt="Gestão de food truck em um tablet"
+                                    class="w-full h-auto object-cover">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <img src="2.png" alt="Ingredientes organizados em prateleiras"
+                                    class="w-full h-auto object-cover">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <img src="3.png" alt="Clientes felizes sendo atendidos em um food truck"
+                                    class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <!-- Paginação -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Botões de Navegação -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== Seção de Funcionalidades ===== -->
-        <section id="funcionalidades" class="py-20 bg-white">
+        <section id="funcionalidades" class=".hero-gradient py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Controle total na palma da sua mão.</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Controle total na palma da sua mão.
+                    </h2>
                     <p class="text-gray-600 text-lg">
-                        Tudo que você precisa para uma gestão de estoque eficiente, pensado para a rotina agitada de um food truck.
+                        Tudo que você precisa para uma gestão de estoque eficiente, pensado para a rotina agitada de um
+                        food truck.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <!-- Funcionalidade 1 -->
-                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-orange-100 text-orange-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div
+                            class="bg-orange-100 text-orange-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
                             <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Controle em Tempo Real</h3>
-                        <p class="text-gray-600">Saiba exatamente o que entra e sai do seu estoque, item por item, a qualquer momento.</p>
+                        <p class="text-gray-600">Saiba exatamente o que entra e sai do seu estoque, item por item, a
+                            qualquer momento.</p>
                     </div>
 
                     <!-- Funcionalidade 2 -->
-                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-blue-100 text-blue-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div
+                            class="bg-blue-100 text-blue-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
                             <i data-lucide="bell-ring" class="w-7 h-7"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Alertas Inteligentes</h3>
-                        <p class="text-gray-600">Receba notificações quando um ingrediente estiver acabando, antes que se torne um problema.</p>
+                        <p class="text-gray-600">Receba notificações quando um ingrediente estiver acabando, antes que
+                            se torne um problema.</p>
                     </div>
 
                     <!-- Funcionalidade 3 -->
-                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-green-100 text-green-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div
+                            class="bg-green-100 text-green-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
                             <i data-lucide="file-text" class="w-7 h-7"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Relatórios de Custo</h3>
-                        <p class="text-gray-600">Entenda quais produtos geram mais lucro e onde você está perdendo dinheiro para otimizar suas compras.</p>
+                        <p class="text-gray-600">Entenda quais produtos geram mais lucro e onde você está perdendo
+                            dinheiro para otimizar suas compras.</p>
                     </div>
 
                     <!-- Funcionalidade 4 -->
-                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-purple-100 text-purple-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div
+                            class="bg-purple-100 text-purple-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
                             <i data-lucide="truck" class="w-7 h-7"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Gestão de Fornecedores</h3>
-                        <p class="text-gray-600">Centralize os contatos e os pedidos dos seus fornecedores em um único lugar.</p>
+                        <p class="text-gray-600">Centralize os contatos e os pedidos dos seus fornecedores em um único
+                            lugar.</p>
                     </div>
 
                     <!-- Funcionalidade 5 -->
-                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-red-100 text-red-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div
+                            class="bg-red-100 text-red-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
                             <i data-lucide="smartphone" class="w-7 h-7"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Fácil de Usar</h3>
-                        <p class="text-gray-600">Interface intuitiva pensada para a sua rotina. Sem complicações e direto ao ponto.</p>
+                        <p class="text-gray-600">Interface intuitiva pensada para a sua rotina. Sem complicações e
+                            direto ao ponto.</p>
                     </div>
 
-                     <!-- Funcionalidade 6 -->
-                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
-                        <div class="bg-yellow-100 text-yellow-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
+                    <!-- Funcionalidade 6 -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+                        <div
+                            class="bg-yellow-100 text-yellow-600 w-14 h-14 rounded-full flex items-center justify-center mb-5">
                             <i data-lucide="cloud" class="w-7 h-7"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Acesso de Onde Estiver</h3>
-                        <p class="text-gray-600">Acesse seus dados de qualquer dispositivo, seja no celular, tablet ou computador.</p>
+                        <p class="text-gray-600">Acesse seus dados de qualquer dispositivo, seja no celular, tablet ou
+                            computador.</p>
                     </div>
                 </div>
             </div>
@@ -158,9 +220,12 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <!-- Depoimento 1 -->
                     <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
-                        <p class="text-gray-700 text-lg mb-6">"Depois do EstoqueFácil, a gestão do meu food truck se transformou. Acabou o estresse de contar estoque no fim do dia e finalmente sei para onde meu dinheiro está indo. Recomendo!"</p>
+                        <p class="text-gray-700 text-lg mb-6">"Depois do EstoqueFácil, a gestão do meu food truck se
+                            transformou. Acabou o estresse de contar estoque no fim do dia e finalmente sei para onde
+                            meu dinheiro está indo. Recomendo!"</p>
                         <div class="flex items-center">
-                            <img src="https://placehold.co/50x50/cccccc/333333?text=JS" alt="Foto de João Silva" class="w-12 h-12 rounded-full mr-4 border-2 border-orange-200">
+                            <img src="https://placehold.co/50x50/cccccc/333333?text=JS" alt="Foto de João Silva"
+                                class="w-12 h-12 rounded-full mr-4 border-2 border-orange-200">
                             <div>
                                 <p class="font-bold text-gray-900">João Silva</p>
                                 <p class="text-gray-500">Proprietário, Burgers on the Road</p>
@@ -169,9 +234,12 @@
                     </div>
                     <!-- Depoimento 2 -->
                     <div class="bg-white p-8 rounded-xl shadow-md border border-gray-200">
-                        <p class="text-gray-700 text-lg mb-6">"A melhor parte são os alertas. Antes, era comum eu ficar sem um ingrediente essencial no meio do expediente. Com o EstoqueFácil, isso nunca mais aconteceu."</p>
+                        <p class="text-gray-700 text-lg mb-6">"A melhor parte são os alertas. Antes, era comum eu ficar
+                            sem um ingrediente essencial no meio do expediente. Com o EstoqueFácil, isso nunca mais
+                            aconteceu."</p>
                         <div class="flex items-center">
-                            <img src="https://placehold.co/50x50/cccccc/333333?text=MO" alt="Foto de Maria Oliveira" class="w-12 h-12 rounded-full mr-4 border-2 border-blue-200">
+                            <img src="https://placehold.co/50x50/cccccc/333333?text=MO" alt="Foto de Maria Oliveira"
+                                class="w-12 h-12 rounded-full mr-4 border-2 border-blue-200">
                             <div>
                                 <p class="font-bold text-gray-900">Maria Oliveira</p>
                                 <p class="text-gray-500">Proprietária, Taco Truck da Maria</p>
@@ -181,7 +249,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- ===== Seção de Preços (Simples) ===== -->
         <section id="precos" class="py-20 bg-white">
             <div class="container mx-auto px-6">
@@ -194,8 +262,9 @@
                         R$49<span class="text-3xl font-medium text-gray-400">,90/mês</span>
                     </div>
                     <p class="text-gray-400 mb-10">Cancele quando quiser. Sem taxas escondidas.</p>
-                     <a href="#cta" class="bg-orange-500 text-white font-bold px-10 py-4 rounded-lg hover:bg-orange-600 transition-transform hover:scale-105 shadow-lg text-lg">
-                        Começar meu teste de 14 dias
+                    <a href="#cta"
+                        class="bg-orange-500 text-white font-bold px-10 py-4 rounded-lg hover:bg-orange-600 transition-transform hover:scale-105 shadow-lg text-lg">
+                        Gestão Inteligentes.
                     </a>
                 </div>
             </div>
@@ -205,13 +274,12 @@
         <section id="cta" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6 text-center">
                 <div class="max-w-2xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pronto para simplificar a gestão do seu food truck?</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pronto para simplificar a gestão do
+                        seu food truck?</h2>
                     <p class="text-gray-600 text-lg mb-8">
-                        Comece hoje mesmo seu teste gratuito. Sem compromisso e sem precisar de cartão de crédito.
+                        Comece hoje mesmo sua gestão de forma eficiente.
                     </p>
-                    <a href="#" class="bg-orange-500 text-white font-bold px-10 py-4 rounded-lg hover:bg-orange-600 transition-transform hover:scale-105 shadow-lg text-lg">
-                        Quero Meu Teste Gratuito Agora
-                    </a>
+
                 </div>
             </div>
         </section>
@@ -225,16 +293,18 @@
                 <!-- Coluna 1 -->
                 <div>
                     <h4 class="font-bold text-lg mb-4">EstoqueFácil</h4>
-                     <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Início</a>
-                     <a href="#funcionalidades" class="text-gray-400 hover:text-white block mb-2 transition-colors">Funcionalidades</a>
-                     <a href="#precos" class="text-gray-400 hover:text-white block mb-2 transition-colors">Preços</a>
+                    <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Início</a>
+                    <a href="#funcionalidades"
+                        class="text-gray-400 hover:text-white block mb-2 transition-colors">Funcionalidades</a>
+                    <a href="#precos" class="text-gray-400 hover:text-white block mb-2 transition-colors">Preços</a>
                 </div>
                 <!-- Coluna 2 -->
                 <div>
                     <h4 class="font-bold text-lg mb-4">Recursos</h4>
                     <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Blog</a>
                     <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Guias de Uso</a>
-                    <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Perguntas Frequentes</a>
+                    <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Perguntas
+                        Frequentes</a>
                 </div>
                 <!-- Coluna 3 -->
                 <div>
@@ -246,13 +316,22 @@
                 <!-- Coluna 4 -->
                 <div>
                     <h4 class="font-bold text-lg mb-4">Legal</h4>
-                    <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Política de Privacidade</a>
-                    <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Termos de Serviço</a>
+                    <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Política de
+                        Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white block mb-2 transition-colors">Termos de
+                        Serviço</a>
                 </div>
             </div>
 
-            <div class="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500">
-                <p>&copy; 2025 EstoqueFácil. Todos os direitos reservados.</p>
+            <div class="mt-10 pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-500">&copy; 2025 EstoqueFácil. Todos os direitos reservados.</p>
+                <div class="mt-6">
+
+                    <a href="https://www.senai.br/" target="_blank" rel="noopener noreferrer" class="inline-block">
+                        <img src="SENAI.png" alt="Logo SENAI"
+                            class="h-10 filter grayscale hover:grayscale-0 transition-all duration-300">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -261,7 +340,27 @@
     <script>
         // Inicializa os ícones Lucide
         lucide.createIcons();
+
+        // Inicializa o Swiper Carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
     </script>
 
 </body>
+
 </html>
