@@ -1,0 +1,210 @@
+/* NAVBAR */
+
+.fundoTop{
+    background-color: #FF4500;
+}
+
+.corPP {
+    background-color: #fc7443;
+}
+
+
+/* fundo */
+
+body{
+    background-color: #ececec;
+}
+
+/* propaganda */
+
+.fundo {
+    background-color: black;
+}
+
+.imglado{
+    border-radius: 20px;
+    height: 500px;
+    width: auto;
+    display: flex;
+}
+
+/* banner */
+
+.altuCarro{
+    height: 650px;
+    border-radius: 0%;
+    /* margin-top: 20px; */
+}
+
+.t_img {
+    height: 650px;
+}
+
+.nome_Ham {
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: #303030;
+    margin-top: 5px;
+}
+.alt_h5 {
+    height: 85px;
+}
+
+/* Cards */
+
+.card_Group {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-left: 190px;
+}
+
+.card_Group li{
+    flex-basis: 33.33%;
+    margin: 10px 0px 10px 0px;
+}
+
+
+.colorBut {
+    background-color: #fa4e0f;
+    border-radius: 10px;
+}
+
+.colorBut:hover {
+    background-color: #fa642d;
+}
+
+.imgL {
+    height: 280px;
+    width: 385px;
+    border-radius: 10px 10px 0 0;
+    padding: 0px;
+}
+.margem1 {
+    box-shadow: 5px 3px 5px 3px;
+    background-color: #919191;
+}
+
+h1 {
+    font-weight: bold;
+    padding: 20px;
+    color: #FD6306;
+    margin-top: 10px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+
+
+h2 {
+    font-weight: bold;
+    padding: 20px;
+    color: #ff4800;
+    margin-top: 10px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.corBott {
+    background-color: #fc7443;
+}
+
+.espCont {
+    margin-top: 20px;
+}
+
+.corcont {
+    background-color: #000000;
+}
+
+footer{
+    margin: 10px 0 10px 0;
+    color: #bfbfbf;
+    text-align: center;
+    background-color: #FF4500;
+}
+
+
+/* visaoTAB/SMART */
+
+
+/* Tablet: entre 768px e 1024px */
+/* @media (max-width: 1024px) and (min-width: 768px) {
+  body {
+    font-size: 16px;
+    /* background-color: lightgray; */
+
+
+/* Smartphone: até 767px */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    /* background-color: lightblue; */
+  }
+  .card_Group {
+    margin-left: 15px;
+    margin-right: 100px;
+  }
+  .card_Group li{
+    flex-basis: 0;
+    margin: 10px 0px 10px 0px;
+}
+  .altuCarro{
+    height: 200px;
+    border-radius: 0%;
+    margin-top: 0px;
+}
+.margem1 {
+    box-shadow: 3px 1px 3px 1px;
+    width: 380px;
+    height: 480px;
+    /* background-color: #e4e4e4; */
+}
+h2 {
+    font-weight: bold;
+    padding: 0px;
+    color: #ff4800;
+    margin-top: 0px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+footer{
+    margin: 10px 0 10px 0;
+    color: #bfbfbf;
+    text-align: center;
+    background-color: #FF4500;
+}
+
+.t_img {
+    height: 200px;
+}
+
+}
+
+ @media (max-width: 1180px) and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .card_Group {
+    margin-left: 15px;
+    margin-right: 0px;
+  }
+
+  .altuCarro{
+    height: 400px;
+    border-radius: 0%;
+    /* margin-top: 20px; */
+}
+
+.t_img {
+    height: 400px;
+}
+
+}
+
+

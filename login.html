@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Book Box</title>
+  <link rel="stylesheet" href="/css/style-login.css">
+
+
+</head>
+
+<body>
+  <div class="container" role="main">
+    <div class="marketing" aria-hidden="false">
+      <div class="logo"><div class="mark"></div>Estoque Fácil</div>
+      <h1>Bem Vindo ao Estoque Fácil!</h1>
+      <p class="lead">Organize ingredientes, acompanhe o consumo em tempo real e reduza desperdícios com uma plataforma simples, 
+        intuitiva e feita sob medida para a rotina intensa de quem vive sobre rodas.
+         O Estoque Fácil coloca seu estoque na palma da mão — para que você foque no que realmente importa: servir bem e vender mais.</p>
+    </div>
+
+    <div class="panel" aria-labelledby="authHeading">
+      <div>
+        <div class="tabs" role="tablist">
+          <div class="tab active" id="tab-login" role="tab" tabindex="0">Login</div>
+          <div class="tab" id="tab-register" role="tab" tabindex="0">Registre-se</div>
+        </div>
+      </div>
+
+      <div id="messageArea" aria-live="polite"></div>
+
+      <form id="loginForm">
+        <label for="loginEmail">E-mail</label>
+        <input id="loginEmail" name="email" type="email" placeholder="seu@gmail.com" required>
+
+        <label for="loginPassword">Senha</label>
+        <input id="loginPassword" name="password" type="password" placeholder="Sua Senha" required>
+
+        <div class="actions">
+          <div style="display:flex;gap:8px;align-items:center">
+            <input id="remember" type="checkbox"><label for="remember" class="small"> Lembrar</label>
+          </div>
+          <div class="small"><a href="#" id="forgotLink">Esqueceu a Senha ?</a></div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:6px">
+          <button id="corLog" type="submit" class="btn">login</button>
+          <button type="button" class="ghost" id="toRegister">Crie sua Conta</button>
+        </div>
+      </form>
+
+      <form id="registerForm" style="display:none">
+        <label for="regName">Full name</label>
+        <input id="regName" name="name" type="text" placeholder="Nome Completo" required>
+
+        <label for="regEmail">Email</label>
+        <input id="regEmail" name="email" type="email" placeholder="seu@gmail.com" required>
+
+        <div class="row">
+          <div style="flex:1">
+            <label for="regPassword">Senha</label>
+            <input id="regPassword" name="password" type="password" placeholder="Min 6 Caracteres" required>
+          </div>
+          <div style="flex:1">
+            <label for="regPassword2">Confirmar Senha</label>
+            <input id="regPassword2" name="password2" type="password" placeholder="Digite Novamente" required>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:6px">
+          <button id="corLog" type="submit" class="btn">Criar Conta</button>
+          <button type="button" class="ghost" id="toLogin">Voltar ao Login</button>
+        </div>
+      </form>
+
+      <footer>Ao continuar, você aceita os termos de serviço.</footer>
+    </div>
+  </div>
+  <script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>
