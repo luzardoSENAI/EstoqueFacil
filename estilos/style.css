@@ -1,0 +1,243 @@
+:root {
+    --azul-escuro: #20364D;
+    --bege: #E5D4D4;
+    --laranja-fraco: #E67F45;
+    --laranja-neon:#FD6506;
+    --cinza: #888888;
+    --branco: #fff;
+    --branco-amarelado: #FFF1E3;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #E5D4D4;
+}
+
+nav {
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    position: fixed;
+}
+
+/*menu lateral*/
+nav.menu {
+    width: 60px;
+    height: 100%;
+    background-color: #E48044;
+    padding: 40px 0px 40px 1%;
+    box-shadow: 3px 0px 0 0 rgb(2, 6, 54);
+    overflow: hidden;
+    transition: .3s;
+}
+
+/*icon hamburger*/
+.hamburger {
+    width: 100%;
+    size: 30pt;
+    padding-left: 5px;
+}
+
+/*Animação de expnsão de menu*/
+nav.menu.expandir {
+    width: 300px;
+    transition: .3s;
+}
+
+/*icon do menu hamburger */
+.hamburger i {
+    color: aliceblue;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+/*Formatação de links nos item*/
+a {
+    color: #1F364B;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 5%;
+    display: flex;
+    line-height: 40px;
+}
+
+/*Texto do link*/
+.text-link {
+    margin-left: 20px;
+}
+
+/*Formatação de class em JS*/
+ul li.ativo {
+    background-color: #E7C9B4;
+}
+
+.item:hover {
+    background-color: #E7C9B4;
+    transition: .3s;
+}
+
+/*tamanho do icone do home*/
+.icon {
+    font-size: 20pt;
+}
+
+header {
+    width: 100%;
+}
+
+.cab {
+    text-align: center;
+    background-color: var(--laranja-neon);
+    color: var(--azul-escuro);
+    padding-bottom: 10px;
+}
+
+img {
+    margin-left: 50px;
+    width: 1500px;
+    height: 672px;
+}
+
+/*Cabeçalho do cadastro*/
+.cab2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    margin-left: 30%;
+    text-align: center;
+    background-color: var(--laranja-neon);
+    color: var(--branco);
+    padding: 10px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+/*imagem do cabeçalho do cadastro*/
+.cab2 img {
+    width: 25px;
+    height: 25px;
+    display: flex;
+}
+
+/*texto do cabeçalho*/
+.txt {
+    text-align: center;
+    color: #1F364B;
+}
+
+/*conteudo cadastro*/
+.main-cadastro {
+    margin-left: 70px ;
+}
+
+.box1 {
+    margin: auto;
+    background-color: var(--laranja-neon);
+    padding: 15px;
+    width: 80%;
+    border-radius: 10px;
+    color: var(--branco);
+}
+
+.formulario {
+    padding-top: 5%;
+    margin-left: 10.1%;
+    background-color: var(--branco-amarelado);
+    width: 80%;
+    border-radius: 0px 0px 20px 20px;
+    padding-bottom: 20px;
+}
+
+.formulario input {
+    margin-left: 10%;
+    width: 35%;
+    border-radius: 15px;
+    border: 1px solid var(--azul-escuro);
+    padding: 5px;
+}
+
+#produtos{
+ margin-left: 10%;
+}
+
+#vendas {
+    margin-left: 50%;
+    position: relative;
+    top: -46px;
+}
+
+textarea{
+    width: 75%;
+    height: 100px;
+    margin-left: 10%;
+    border-radius: 15px;
+}
+
+.descricao{
+    margin-left: 10%;
+}
+
+.formulario p{
+    margin-left: 10%;
+}
+.point{
+    width: 80%;
+    height: 100px;
+    border-style: dotted;
+    display: flex;
+    margin: auto;
+}
+
+.point p{
+    text-align: center;
+    color: #888888;
+    margin-left: 40%;
+}
+
+
+
+/*Area de receita*/
+.section-receita{
+    margin-top: 1%;
+    margin-left:10% ;
+    background-color: var(--laranja-neon);
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    color: var(--branco);
+}
+.section-receita h3{
+    margin-top: 10px;
+}
+.section-receita input{
+    margin-left:65% ;
+    position: relative;
+    top: -20px;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+}
+.receituario{
+    text-align: center;
+    padding-top: 1%;
+    margin-left: 10.2%;
+    background-color: var(--branco-amarelado);
+    width: 79.1%;
+    border-radius: 0px 0px 20px 20px;
+    padding-bottom: 1%;
+}
