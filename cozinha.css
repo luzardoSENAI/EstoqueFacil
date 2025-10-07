@@ -1,0 +1,150 @@
+/* Menu Lateral */
+#navbar {
+    width: 75px;
+    height: 100%;
+    box-shadow: 1px 0px rgb(2, 6, 54);
+    background: #E48044;
+
+}
+
+#container {
+    height: 100%;
+    background: #E48044;
+}
+
+#navbar-itens {
+    align-items: center;
+}
+
+a {
+    color: #1F364B;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 5%;
+    display: flex;
+}
+
+.icon {
+    font-size: 20pt;
+}
+
+#offcanvasNavbar {
+    background: #E48044;
+}
+
+/* Header */
+header {
+    margin-top: 20px;
+    margin-left: 100px;
+    color: #1F364B;
+}
+
+#header-icon {
+    color: #8C262F;
+}
+
+/* Main */
+body {
+    background: #E6DCD5;
+}
+
+main {
+    margin-left: 80px;
+}
+
+.minha-lista-flex {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.minha-lista-flex li {
+    flex-basis: 33.33%;
+}
+
+/* Card de pedidos */
+
+.pedido-card {
+    border: 1px solid #e0d8d3;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.status {
+    background-color: #DCD1CA;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.observacoes-box {
+    background-color: #e6e6e6;
+    border-left: 4px solid #b22222;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.btn-alerta {
+    background-color: #b22222;
+    color: white;
+}
+
+.btn-alerta:hover {
+    background-color: #8b1a1a;
+    color: white;
+}
+
+.btn-iniciar {
+    background-color: #f28b3f;
+    color: white;
+}
+
+.btn-iniciar:hover {
+    background-color: #d9772d;
+    color: white;
+}
+
+.card-andamento {
+    border: 1px solid #e0d8d3;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #fff5f5;
+
+}
+
+.status.andamento {
+    background-color: #ffcccc;
+    color: #8b0000;
+}
+
+.receita-box {
+    background-color: #e6e6e6;
+    border-left: 4px solid #f28b3f;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.btn-concluir {
+    background-color: #f28b3f;
+    color: white;
+}
+
+.btn-concluir:hover {
+    background-color: #d9772d;
+    color: white;
+}
+
+.card-concluido {
+    border: 1px solid #e6d5b8;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #fffaf0;
+}
+
+.status.concluido {
+    background-color: #ffe4b5;
+    color: #b35b00;
+}
