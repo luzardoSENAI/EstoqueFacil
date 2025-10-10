@@ -61,7 +61,7 @@ body{
     /* padding: 0; */
     justify-content: center;
     /* flex-direction: column; */
-    gap: 40xp;
+    gap: 30px;
 }
 
 
@@ -140,7 +140,6 @@ footer{
 @media (max-width: 767px) {
   body {
     font-size: 14px;
-    /* background-color: lightblue; */
   }
 
   .imgL {
